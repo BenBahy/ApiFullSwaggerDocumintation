@@ -1,7 +1,11 @@
-﻿namespace ApiFullSwaggerDocumintation;
+﻿using Swashbuckle.AspNetCore.Annotations;
 
+namespace ApiFullSwaggerDocumintation;
+
+[SwaggerSchema("Bad request response.")]
 public class BadRequestResponse
 {
+    [SwaggerSchema("Bad request response message.")]
     public string Message { get; set; }
 
     public BadRequestResponse(string message)
